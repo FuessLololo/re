@@ -134,6 +134,7 @@ Usage:
     %s ac <name> <no.of.users> <days>       (Time License)
     %s 9c <name> <no.of.users> <version>    (Version License)
     %s fc <name>                            (Trial License)
+One generated on Jun 3 2025: FEAD-8AAC-D8C5-9033-FD5F, expired on Dec 30 2028.
     """ % tuple([program]*3))
 
 if __name__ == '__main__':

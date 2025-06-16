@@ -20,10 +20,11 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize)
 }
 
 int main() {
-    int nums[5] = { 7, 3, 5, 10, 22 };
+    int nums[5] = { 260, 4096, 5, 10, 22 };
     int returnSize = 0;
 
     int* twoSumResult = twoSum(nums, sizeof(nums) / sizeof(nums[0]), 32, &returnSize);
+    printf("test: %d\n", nums[1]);
 
     if (returnSize > 0){
         for (int i = 0; i < returnSize; ++i){

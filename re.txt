@@ -1,0 +1,45 @@
+*** Install Ghidra ***
+
+	1. Download JDK21 from https://adoptium.net/temurin/releases/?os=any&arch=any&version=21 , extract, rename to jdk-21 and move to /opt/
+	2. Use `update-alternatives` to configure java:
+		1). Add java and javac by `sudo update-alternatives --install /usr/bin/java java /opt/jdk-21/bin/java 1100` and `sudo update-alternatives --install /usr/bin/javac javac /opt/jdk-21/bin/javac 1100`
+		2). Run java instance by `sudo update-alternatives --config java` and check by `java --version`
+		Alternatively, configure the environment variables by adding these to `~/.bashrc`:
+			```
+			export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64" # Or your custom path like /opt/jdk-21
+			export PATH="$JAVA_HOME/bin:$PATH"
+			```
+		Note: `bash: /usr/bin/java: cannot execute binary file: Exec format error` means the package is for a different architecture.
+	3. Download release from github and tru `./ghidraRun`
+
+*** Use Ghidra to debug ***
+	
+	1. Install gdb by `sudo apt install gdb`
+	2. Verify the version of Python supported by GDB running 
+		```
+		$ gdb
+		(gdb) python import sys
+		(gdb) python print(sys.version)
+		(gdb) quit
+		```
+	   Make sure the version is at least 3.7
+	3. Install osutil and protobuf Python modules by `sudo apt install python3-psutil python3-protobuf`, can check by `apt list --installed | grep 'python3-psutil`
+
+
+============== Learning Materials ==============
+
+=== Guide ===
+	1. How To Start Reverse Engineering — A Guide https://medium.com/@arkaghosh08/how-to-start-reverse-engineering-a-guide-b50b6c8112cf
+	2. RoadMap https://github.com/x86byte/RE-MA-Roadmap?tab=readme-ov-file
+
+=== Read ===
+	1. Network basics https://www.w3schools.com/cybersecurity/cybersecurity_networking.php
+
+
+=== Projects === 
+	1. External Game Hacks with AssaultCube https://adminions.ca/books/articles/page/part-1-from-reverse-engineering-to-cheat-development-external-game-hacks-with-assaultcube
+
+=== Puzzles === 
+	1. TryHackMe. Simples ones. https://tryhackme.com/
+	2. OverTheWire (Wargames). Command lines entirely text-based. 
+

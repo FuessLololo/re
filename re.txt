@@ -31,6 +31,7 @@
 === Guide ===
 	1. How To Start Reverse Engineering — A Guide https://medium.com/@arkaghosh08/how-to-start-reverse-engineering-a-guide-b50b6c8112cf
 	2. RoadMap https://github.com/x86byte/RE-MA-Roadmap?tab=readme-ov-file
+	3. cyber security learning path https://freedium.cfd/https://medium.com/@adarshpandey180/free-tryhackme-training-the-ultimate-beginners-guide-to-hacking-aac8e43bf81b
 
 === Read ===
 	1. Network basics https://www.w3schools.com/cybersecurity/cybersecurity_networking.php

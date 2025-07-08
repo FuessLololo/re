@@ -1,3 +1,10 @@
+============= NOTES =============
+
+1. nmap command used for probing test:
+	probe service: nmap -sV -T4 localhost --version-intensity 6 -p 31000-32000
+	probe opening ports: nmap localhost -p 31000-32000
+
+
 *** Install Ghidra ***
 
 	1. Download JDK21 from https://adoptium.net/temurin/releases/?os=any&arch=any&version=21 , extract, rename to jdk-21 and move to /opt/
@@ -43,4 +50,5 @@
 === Puzzles === 
 	1. TryHackMe. Simples ones. https://tryhackme.com/
 	2. OverTheWire (Wargames). Command lines entirely text-based. 
+
 

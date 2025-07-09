@@ -4,6 +4,12 @@
 	probe service: nmap -sV -T4 localhost --version-intensity 6 -p 31000-32000
 	probe opening ports: nmap localhost -p 31000-32000
 
+2. openssl command used for ssh to a host
+	openssl s_client --connect localhost:30001 [--quiet]
+
+3. uniq and sort
+	sort data.txt | uniq -c [-u]
+
 
 *** Install Ghidra ***
 

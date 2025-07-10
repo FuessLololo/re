@@ -10,6 +10,17 @@
 3. uniq and sort
 	sort data.txt | uniq -c [-u]
 
+4. cron:
+	- check /etc/cron.d/ for the jobs run iterately. Unlike job configs in /var/spool/cron/crontab/, the jobs definition must contain the username under which the command is executed.	
+		Examples:
+		@reboot bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
+		* * * * * bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
+
+		#!/bin/bash
+		chmod 644 /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+		cat /etc/bandit_pass/bandit22 > /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+	- check "man 5 crontab" "cron" "crontab"
+
 
 *** Install Ghidra ***
 

@@ -21,6 +21,25 @@
 		cat /etc/bandit_pass/bandit22 > /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
 	- check "man 5 crontab" "cron" "crontab"
 
+5. tr:
+	- cat data.txt 
+		Gur cnffjbeq vf 7k16JArUVv5LxVuJfsSVdbbtaHGlw9D4
+	  cat data.txt | tr [a-mn-zA-MN-Z] [n-za-mN-ZA-M]
+		The password is 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+
+6. xxd -r target object: To convert a hex dump to the file
+
+7. cut -d ' ' -f 1: equals to string_variable.split(' ')[0]
+
+8. sed
+	1. replace the last line of a file
+		a. new_line = $(tail -n 1 file.txt)
+		   sed -i -e "s/$old_line/new_line/"    *only used when the last line is unique
+		b. sed -i "$cnew_line"
+
+9. cron file for auto cleaning up
+	*/30 * * * * root find /tmp -amin 60 -type f -delete &> /dev/null && find /tmp -amin 5 -type d -empty -delete &> /dev/null
+
 
 *** Install Ghidra ***
 
@@ -67,5 +86,5 @@
 === Puzzles === 
 	1. TryHackMe. Simples ones. https://tryhackme.com/
 	2. OverTheWire (Wargames). Command lines entirely text-based. 
-
+	3. CTF puzzles in <practical binary analysis>: https://practicalbinaryanalysis.com/
 

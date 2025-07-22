@@ -23,5 +23,9 @@ l22 tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q
 l23 0Zf11ioIjMVN551jX3CmStKLYqjk54Ga
 l24 gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8
 l25 iCi86ttT4KSNe1armKiwbQNmB3YJP3q4 **( for i in {0000..9999}; do echo "gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8 ${i}"; sleep 0.01; done; ) | nc localhost 30002 > /tmp/pwd_for_25.txt**, pwd is 2219
-l26 s0773xxkk0MXfdqOfPRVr9L3jJBUOgCZ
-l27 upsNCc7vzaRDx6oZC6GiR6ERwe1MowGB
+l26 s0773xxkk0MXfdqOfPRVr9L3jJBUOgCZ **tricky**
+l27 upsNCc7vzaRDx6oZC6GiR6ERwe1MowGB 
+l28 Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN
+l29 4pT1t5DENaYuqnqvadYs1oE4QLCdjmJ7
+l30 qp30ex3VLz5MDG1n91YowTv4Q8l7CDZL
+l31 fb5S2xb7bRyFmAvQYQGEqsbhVyJqhnDy

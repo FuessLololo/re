@@ -40,6 +40,10 @@
 9. cron file for auto cleaning up
 	*/30 * * * * root find /tmp -amin 60 -type f -delete &> /dev/null && find /tmp -amin 5 -type d -empty -delete &> /dev/null
 
+10. git 
+	1. shallow clone to avoid too many histories in .git folder: git clone SOMEREPO -depth 1
+	2. git clone ssh://bandit27-git@localhost:2220/home/bandit27-git/repo clone with ssh and username&password and port...
+
 
 *** Install Ghidra ***
 

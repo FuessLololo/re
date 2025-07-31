@@ -6,3 +6,7 @@ ghidra
 
 # pba-code
 pba-code/
+
+# ignore all the files which does not have extension in gadget/
+gadget/*
+!gadget/*.*

@@ -47,6 +47,9 @@
 	1. shallow clone to avoid too many histories in .git folder: git clone SOMEREPO -depth 1
 	2. git clone ssh://bandit27-git@localhost:2220/home/bandit27-git/repo clone with ssh and username&password and port...
 
+11. find
+	1. find files based on permissions: find / -perm /u=s -type f 
+
 
 *** Install Ghidra ***
 

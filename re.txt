@@ -37,6 +37,9 @@
 		   sed -i -e "s/$old_line/new_line/"    *only used when the last line is unique
 		b. sed -i "$cnew_line"
 
+	2. show one specific line
+		sed -n 'Np' filename
+
 9. cron file for auto cleaning up
 	*/30 * * * * root find /tmp -amin 60 -type f -delete &> /dev/null && find /tmp -amin 5 -type d -empty -delete &> /dev/null
 

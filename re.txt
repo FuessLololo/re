@@ -98,3 +98,9 @@
 	2. OverTheWire (Wargames). Command lines entirely text-based. 
 	3. CTF puzzles in <practical binary analysis>: https://practicalbinaryanalysis.com/
 
+=== Tools ===
+1. dirb - a web content scanner
+2. BuiltWith -  identify the technologies in use
+3. burp - a spidering tool
+4. archives.org
+

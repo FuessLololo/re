@@ -50,6 +50,57 @@
 11. find
 	1. find files based on permissions: find / -perm /u=s -type f 
 
+12. htop
+       Basically a tool to gather information from /proc
+	1. H to show only the main process, h to show all threads
+
+13. PDB 
+	r continue until 'r'eturn to the previous stack frame
+	c continue to the top
+	d go 'd'own into the next stack frame
+	u go 'u'p into the previous stack frame
+	w show 'w'here the program is in the frame stacks
+	ll print the function source
+	unt contine 'unt'il the line number is bigger than the current one.
+	a list the arguments of the current function
+	p print the variable
+
+14. IPython shell
+	1. Using together with playwright / inside asyncio event loop
+        from nest_asyncio import NestedAsyncIO
+        with NestedAsyncIO():
+            from IPython import embed
+            embed()
+
+15. wireshark
+	1. Capture the traffic we care about: ip addr
+	2. Confirm the process owning the port:
+		a. sudo lsof -i :403
+		b. sudo ss -lntp for listinging tcp processes, while resolving the hostname to numeric addresses(-n)
+		c. sudo ss -uap for all the udp processes
+	3. sudo tcpdump -i [network_interface] host [numeric_ip_address] and port [port] -w problem.pcap
+		3.1 Noted that sometimes we can even abort the host part to avoid missing packets.
+	4. Do the operations that cause the bug, then ^C
+	5. Wireshark GUI -> File -> Open dumped file
+
+16. Systemd 
+	- find the related services:
+		systemctl list-units --type=service | grep -i some_service
+	- disable from auto-start when boot and stop:
+		sudo systemctl disable/stop some_service
+	- remove the symlink to prevent any process from starting the service:
+        	sudo systemctl disable huntress-rio.service
+	- mask the symlink to lock it, this overrides the original service to null so anyone couldn't start it
+        	sudo systemctl mask huntress-rio.service
+	- Quick check sevice status
+        	sudo systemctl status huntress-rio.service
+	  Or the comprehend version
+        	sudo systemctl cat huntress-rio.service
+	- Reload the manager configuration (also need enable and start)
+		sudo systemctl daemon-reload
+
+17. memray
+
 
 *** Install Ghidra ***
 
@@ -78,6 +129,17 @@
 	   Make sure the version is at least 3.7
 	3. Install osutil and protobuf Python modules by `sudo apt install python3-psutil python3-protobuf`, can check by `apt list --installed | grep 'python3-psutil`
 
+18. jupyter
+
+	1. On company computers, use pyenv to create a virtual environment. Also need to reset $PYTHONPATH before activate the venv.
+	2. Register the kernel: python -m ipykernel install --user --name=alice3.12 --display-name "Python (alice3.12)"
+	3. jupyter lab --port=10001 
+
+19. tcpdump
+	tcpdump -i any -nn -l "tcp port 25565 and not host 100.107.142.104"
+	-i any: captures packets on all active network interfaces
+	-nn don't resolve hostname domain names and service names, display ip and port directly
+	-l print line by line right away, suitable for piping to grep
 
 ============== Learning Materials ==============
 
@@ -104,3 +166,5 @@
 3. burp - a spidering tool
 4. archives.org
 
+=== Math ===
+1. Maryland University Math 431 -- Geometry for Computer Applications https://math.umd.edu/~immortal/MATH431/
